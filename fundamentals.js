@@ -1,5 +1,12 @@
 const aCar = {
     owner : "Joe Bloggs",
+    address : '3 Walkers Lane',
+    previous_owners: [
+        {
+            name: "Pat Smith",
+            address: "1 Main Street"
+        },
+    ],
     type : {
         make: 'Toyota',
         model: 'Corolla',
@@ -13,5 +20,9 @@ const aCar = {
 };
 
 console.log(aCar.owner + ' drives a ' + aCar.type.make);
+
 console.log('Reg. = ' + aCar.registration.year + '-' +
-    aCar.registration.county + '-' + aCar.registration.number + '.'); 
+    aCar.registration.county + '-' + aCar.registration.number + '.');
+
+console.log('First owner : ' + aCar.previous_owners[0].name + ' - '
+    + aCar.previous_owners[0].address); 
